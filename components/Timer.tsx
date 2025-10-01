@@ -5,7 +5,7 @@ interface TimerProps {
 }
 
 export default function Timer({ onExpire }: TimerProps) {
-   const [timeLeft, setTimeLeft] = useState(900);
+   const [timeLeft, setTimeLeft] = useState(1800);
 
    useEffect(() => {
       if (timeLeft <= 0) {
@@ -23,7 +23,7 @@ export default function Timer({ onExpire }: TimerProps) {
    const minutes = Math.floor(timeLeft / 60);
    const seconds = timeLeft % 60;
 
-   const danger = timeLeft <= 180;
+   const danger = timeLeft <= 900;
 
    return (
       <div
