@@ -34,14 +34,12 @@ export default function TariffCard({
     `}
          onClick={onSelect}
       >
-         {/* ХИТ */}
          {isBest && (
             <span className="absolute top-2 right-3 text-[#FDB056] font-semibold px-3 py-1 rounded-b-lg text-sm sm:text-base">
                ХИТ!
             </span>
          )}
 
-         {/* Верх */}
          <div className="flex flex-col items-center gap-4 sm:gap-6 md:items-start">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-center md:text-left text-[#FFFFFF]">
                {period}
@@ -64,7 +62,6 @@ export default function TariffCard({
             )}
          </div>
 
-         {/* Текст */}
          <p className={`text-sm sm:text-base lg:text-lg text-[#FFFFFF] ${isBest ? "md:w-80 lg:w-96 text-center md:text-left" : "text-center md:text-left"}`}>
             {text}
          </p>

@@ -45,10 +45,8 @@ export default function HomePage() {
           <span className="text-[#FDB056]">тариф</span>
         </h1>
 
-        {/* Блок с картинкой и тарифами */}
         <div className="flex flex-col lg:flex-row items-center md:items-start gap-8 w-full">
 
-          {/* Левая часть (картинка тренера) */}
           <div className="flex-shrink-0 flex justify-center lg:justify-start w-full lg:w-auto">
             <img
               src="/hero-img.png"
@@ -57,10 +55,8 @@ export default function HomePage() {
             />
           </div>
 
-          {/* Правая часть (тарифы + кнопки) */}
           <div className="flex flex-col gap-6 w-full">
 
-            {/* Лучший тариф */}
             {tariffs.filter((t) => t.is_best).map((t, idx) => {
               const duplicate = tariffs.filter(x => x.id === t.id).length > 1;
               const displayId = duplicate ? `${t.id}-${idx}` : t.id;
@@ -83,7 +79,6 @@ export default function HomePage() {
               );
             })}
 
-            {/* Остальные тарифы */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {tariffs.filter((t) => !t.is_best).map((t, idx) => {
                 const duplicate = tariffs.filter(x => x.id === t.id).length > 1;
@@ -108,7 +103,6 @@ export default function HomePage() {
               })}
             </div>
 
-            {/* Подсказка */}
             <div className="flex items-start bg-[#2D3233] rounded-xl w-full gap-3 py-2 px-4">
               <span className="text-[#FDB056] text-xl">!</span>
               <div className="text-white">
@@ -116,7 +110,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Форма согласия и кнопка купить */}
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <input
@@ -156,7 +149,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Гарантия возврата */}
         <div className="border border-[#484D4E] rounded-2xl p-3 mt-10">
           <button className="text-[#81FE95] border border-[#81FE95] rounded-2xl px-3 py-1">
             гарантия возврата 30 дней
