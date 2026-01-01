@@ -1,22 +1,21 @@
+
+---
+
+## 📁 tariffs-test — README.md
+
+```md
 # Tariffs Test Project
 
-A test project demonstrating tariff plans UI and TypeScript usage.
-
-## 📊 About
-Built as a test assignment to showcase component logic and type safety.
+UI project demonstrating tariff plans using Next.js and TypeScript.
 
 ## 🛠 Tech Stack
+- Next.js
 - TypeScript
 - JavaScript
 - HTML
 - CSS
 
-## 🚀 Features
-- Tariff cards
-- Structured types
-- Clean logic
-
-## ▶️ Run
+## ▶️ Run Locally
 ```bash
 npm install
-npm run start
+npm run dev
